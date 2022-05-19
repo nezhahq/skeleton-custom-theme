@@ -1,0 +1,21 @@
+debug: true
+language: en-US
+site:
+  brand: 全球主机监控
+  cookiename: tulong
+  theme: custom
+  customcode: ""
+  viewpassword: ""
+oauth2:
+  type: gitee
+  admin: naibahq
+  clientid: xxxxxx
+  clientsecret: xxxxxx
+httpport: 80
+grpcport: 5555
+grpchost: ""
+proxygrpcport: 0
+tls: false
+enableplainipinnotification: false
+enableipchangenotification: false
+ipchangenotificationtag: default

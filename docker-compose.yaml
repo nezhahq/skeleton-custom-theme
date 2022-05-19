@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  dashboard:
+    image: ghcr.io/naiba/nezha-dashboard
+    restart: always
+    volumes:
+      - ./data:/dashboard/data
+      - ./theme-custom/template:/dashboard/resource/template/theme-custom:ro
+      - ./theme-custom/static:/dashboard/resource/static/theme-custom:ro
+    ports:
+      - 80:80
+      - 5555:5555
