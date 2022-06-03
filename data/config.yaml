@@ -4,6 +4,7 @@ site:
   brand: 全球主机监控
   cookiename: tulong
   theme: custom
+  dashboardtheme: custom
   customcode: ""
   viewpassword: ""
 oauth2:

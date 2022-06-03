@@ -8,6 +8,8 @@ services:
       - ./data:/dashboard/data
       - ./theme-custom/template:/dashboard/resource/template/theme-custom:ro
       - ./theme-custom/static:/dashboard/resource/static/theme-custom:ro
+      - ./dashboard-custom/template:/dashboard/resource/template/dashboard-custom:ro
+      - ./dashboard-custom/static:/dashboard/resource/static/dashboard-custom:ro
     ports:
       - 80:80
       - 5555:5555
