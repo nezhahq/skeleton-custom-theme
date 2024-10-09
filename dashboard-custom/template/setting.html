@@ -42,6 +42,10 @@
                 <textarea name="CustomCode">{{.Conf.Site.CustomCode}}</textarea>
             </div>
             <div class="field">
+                <label>{{tr "CustomCodesDashboard"}}</label>
+                <textarea name="CustomCodeDashboard">{{.Conf.Site.CustomCodeDashboard}}</textarea>
+            </div>
+            <div class="field">
                 <label>{{tr "AccessPassword"}}</label>
                 <input type="text" name="ViewPassword" placeholder="" value="{{.Conf.Site.ViewPassword}}">
             </div>
@@ -70,16 +74,22 @@
                     <input type="text" name="IPChangeNotificationTag" placeholder="" value="{{.Conf.IPChangeNotificationTag}}">
                 </div>
                 <div class="field">
-                    <div class="ui nf-ssl checkbox ip-change">
+                    <div class="ui checkbox ip-change">
                         <input name="EnableIPChangeNotification" type="checkbox" tabindex="0" class="hidden">
                         <label>{{tr "Enable"}}</label>
                     </div>
                 </div>
             </div>
             <div class="field">
-                <div class="ui nf-ssl checkbox plain-ip">
+                <div class="ui checkbox plain-ip">
                     <input name="EnablePlainIPInNotification" type="checkbox" tabindex="0" class="hidden">
                     <label>{{tr "NotificationMessagesDoNotHideIP"}}</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox disable-switch-template">
+                    <input name="DisableSwitchTemplateInFrontend" type="checkbox" tabindex="0" class="hidden">
+                    <label>{{tr "DisableSwitchTemplateInFrontend"}}</label>
                 </div>
             </div>
             <button class="ui button" type="submit">{{tr "Save"}}</button>
@@ -122,11 +132,14 @@
     })
     $('.checkbox').checkbox()
     $('#settingForm').find("select[name=Cover]").val({{.Conf.Cover }});
-    {{if .Conf.EnableIPChangeNotification}}
+    {{ if .Conf.EnableIPChangeNotification}}
     $('.checkbox.ip-change').checkbox('set checked')
     {{ end }}
-    {{if .Conf.EnablePlainIPInNotification}}
+    {{ if .Conf.EnablePlainIPInNotification}}
     $('.checkbox.plain-ip').checkbox('set checked')
+    {{ end }}
+    {{ if .Conf.DisableSwitchTemplateInFrontend }}
+    $('.checkbox.disable-switch-template').checkbox('set checked')
     {{ end }}
 </script>
 {{end}}

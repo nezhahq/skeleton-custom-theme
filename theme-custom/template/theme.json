@@ -1,0 +1,8 @@
+{
+    "name": "Custom",
+    "description": "My Custom Theme",
+    "maintainer": "Noname <example@example.com>",
+    "repo": "https://example.com/custom-theme.git",
+    "version": "0.0.1",
+    "support_versions": "latest"
+}
