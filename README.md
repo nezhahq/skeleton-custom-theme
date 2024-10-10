@@ -1,6 +1,6 @@
 # 哪吒主题开发环境
 
-仅支持 `dashboard v0.19.11` 及更新版本。
+仅支持 `dashboard v0.19.20` 及更新版本。
 
 1. 克隆当前仓库到本地
 2. 修改 `data/config.yaml` oauth2 配置（回调连接可以填 `http://localhost` 的）
